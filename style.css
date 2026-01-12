@@ -1,0 +1,221 @@
+{\rtf1\ansi\ansicpg936\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red24\green26\blue31;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c12157\c13725\c16078;\cssrgb\c100000\c100000\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 /* \uc0\u20840 \u23616 \u37325 \u32622 \u19982 \u22522 \u30784 \u26679 \u24335  - \u28385 \u36275 Contrast/Alignment/Repetition\u21407 \u21017  */\
+* \{\
+  margin: 0;\
+  padding: 0;\
+  box-sizing: border-box;\
+  font-family: 'Roboto', Arial, sans-serif; /* \uc0\u32479 \u19968 \u23383 \u20307  */\
+\}\
+\
+body \{\
+  background-color: #f8f9fa;\
+  color: #333;\
+  line-height: 1.6;\
+\}\
+\
+/* \uc0\u27178 \u24133 \u35774 \u35745  - \u28385 \u36275 Banner\u21019 \u24847 \u24615 /Repetition\u21407 \u21017  */\
+.header-banner \{\
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\
+  color: white;\
+  padding: 2rem;\
+  text-align: center;\
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);\
+  position: relative;\
+  overflow: hidden;\
+\}\
+\
+.header-banner::before \{\
+  content: "";\
+  position: absolute;\
+  top: 0;\
+  left: 0;\
+  width: 100%;\
+  height: 100%;\
+  background: url('\uc0\u36164 \u28304 \u25991 \u20214 \u22841 /banner-pattern.png') repeat; /* \u21487 \u26367 \u25442 \u20026 \u33258 \u23450 \u20041 \u22270 \u26696  */\
+  opacity: 0.1;\
+  animation: movePattern 20s linear infinite;\
+\}\
+\
+@keyframes movePattern \{\
+  0% \{ background-position: 0 0; \}\
+  100% \{ background-position: 100px 100px; \}\
+\}\
+\
+.header-banner h1 \{\
+  font-size: 2.5rem;\
+  margin-bottom: 0.5rem;\
+  position: relative;\
+  animation: fadeIn 1.5s ease-in;\
+\}\
+\
+.header-banner p \{\
+  font-size: 1.2rem;\
+  opacity: 0.9;\
+  position: relative;\
+  animation: fadeIn 2s ease-in;\
+\}\
+\
+/* \uc0\u23548 \u33322 \u26639  - \u28385 \u36275 Alignment/Repetition\u21407 \u21017  */\
+.nav-bar \{\
+  background-color: white;\
+  padding: 1rem;\
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);\
+  position: sticky;\
+  top: 0;\
+  z-index: 100;\
+\}\
+\
+.nav-list \{\
+  display: flex;\
+  justify-content: center;\
+  list-style: none;\
+  gap: 2.5rem;\
+\}\
+\
+.nav-link \{\
+  color: #667eea;\
+  text-decoration: none;\
+  font-weight: 500;\
+  font-size: 1.1rem;\
+  padding: 0.5rem 1rem;\
+  border-radius: 4px;\
+  transition: all 0.3s ease; /* \uc0\u21160 \u25928 \u36807 \u28193  */\
+\}\
+\
+.nav-link:hover \{\
+  background-color: #667eea;\
+  color: white;\
+  transform: translateY(-2px); /* \uc0\u24748 \u20572 \u19978 \u31227 \u21160 \u25928  */\
+\}\
+\
+.nav-link.active \{\
+  background-color: #764ba2;\
+  color: white;\
+\}\
+\
+/* \uc0\u20869 \u23481 \u23481 \u22120  - \u28385 \u36275 Proximity\u21407 \u21017 \u65288 \u30041 \u30333 /\u19981 \u25317 \u25380 \u65289  */\
+.container \{\
+  max-width: 1200px;\
+  margin: 3rem auto;\
+  padding: 0 2rem;\
+\}\
+\
+/* \uc0\u21345 \u29255 \u32452 \u20214  - \u28385 \u36275 Layout\u35774 \u35745 \u21407 \u21017  */\
+.card \{\
+  background-color: white;\
+  border-radius: 12px;\
+  padding: 2rem;\
+  margin-bottom: 3rem;\
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);\
+  transition: transform 0.3s ease, box-shadow 0.3s ease;\
+  animation: slideUp 0.8s ease-out;\
+\}\
+\
+@keyframes slideUp \{\
+  0% \{ transform: translateY(30px); opacity: 0; \}\
+  100% \{ transform: translateY(0); opacity: 1; \}\
+\}\
+\
+.card:hover \{\
+  transform: translateY(-5px);\
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12); /* \uc0\u21345 \u29255 \u24748 \u28014 \u21160 \u25928  */\
+\}\
+\
+.card h2 \{\
+  color: #764ba2;\
+  margin-bottom: 1.5rem;\
+  padding-bottom: 0.5rem;\
+  border-bottom: 2px solid #f0f0f0;\
+\}\
+\
+.card img \{\
+  max-width: 100%;\
+  border-radius: 8px;\
+  margin: 1.5rem 0;\
+  transition: transform 0.5s ease;\
+\}\
+\
+.card img:hover \{\
+  transform: scale(1.02); /* \uc0\u22270 \u29255 \u25918 \u22823 \u21160 \u25928  */\
+\}\
+\
+/* \uc0\u38899 \u35270 \u39057 \u26679 \u24335  - \u20869 \u23884 \u21151 \u33021  */\
+.media-container \{\
+  margin: 1.5rem 0;\
+  border-radius: 8px;\
+  overflow: hidden;\
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);\
+\}\
+\
+audio, video \{\
+  width: 100%;\
+  outline: none;\
+\}\
+\
+video \{\
+  height: auto;\
+\}\
+\
+/* \uc0\u32852 \u31995 \u39029 \u26679 \u24335  - \u28385 \u36275 Alignment\u21407 \u21017  */\
+.contact-info \{\
+  display: flex;\
+  flex-wrap: wrap;\
+  gap: 2rem;\
+  align-items: center;\
+\}\
+\
+.contact-details \{\
+  flex: 1;\
+  min-width: 300px;\
+\}\
+\
+.contact-map \{\
+  flex: 1;\
+  min-width: 300px;\
+\}\
+\
+.contact-map img \{\
+  width: 100%;\
+  border-radius: 8px;\
+\}\
+\
+.contact-link \{\
+  color: #667eea;\
+  text-decoration: none;\
+  display: inline-block;\
+  margin: 0.5rem 0;\
+  transition: color 0.3s ease;\
+\}\
+\
+.contact-link:hover \{\
+  color: #764ba2;\
+  text-decoration: underline;\
+\}\
+\
+/* \uc0\u39029 \u33050  - \u32479 \u19968 \u26679 \u24335  */\
+.footer \{\
+  background-color: #333;\
+  color: white;\
+  text-align: center;\
+  padding: 2rem;\
+  margin-top: 4rem;\
+\}\
+\
+/* \uc0\u21709 \u24212 \u24335 \u35774 \u35745  - \u36866 \u37197 \u19981 \u21516 \u35774 \u22791  */\
+@media (max-width: 768px) \{\
+  .nav-list \{\
+    gap: 1rem;\
+  \}\
+  \
+  .header-banner h1 \{\
+    font-size: 2rem;\
+  \}\
+\}}
