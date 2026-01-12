@@ -1,0 +1,212 @@
+/* 全局重置与基础样式 - 满足Contrast/Alignment/Repetition原则 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', Arial, sans-serif; /* 统一字体 */
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 横幅设计 - 满足Banner创意性/Repetition原则 */
+.header-banner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.header-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('资源文件夹/banner-pattern.png') repeat; /* 可替换为自定义图案 */
+  opacity: 0.1;
+  animation: movePattern 20s linear infinite;
+}
+
+@keyframes movePattern {
+  0% { background-position: 0 0; }
+  100% { background-position: 100px 100px; }
+}
+
+.header-banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.header-banner p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  position: relative;
+  animation: fadeIn 2s ease-in;
+}
+
+/* 导航栏 - 满足Alignment/Repetition原则 */
+.nav-bar {
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+.nav-link {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease; /* 动效过渡 */
+}
+
+.nav-link:hover {
+  background-color: #667eea;
+  color: white;
+  transform: translateY(-2px); /* 悬停上移动效 */
+}
+
+.nav-link.active {
+  background-color: #764ba2;
+  color: white;
+}
+
+/* 内容容器 - 满足Proximity原则（留白/不拥挤） */
+.container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+/* 卡片组件 - 满足Layout设计原则 */
+.card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12); /* 卡片悬浮动效 */
+}
+
+.card h2 {
+  color: #764ba2;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  transition: transform 0.5s ease;
+}
+
+.card img:hover {
+  transform: scale(1.02); /* 图片放大动效 */
+}
+
+/* 音视频样式 - 内嵌功能 */
+.media-container {
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+audio, video {
+  width: 100%;
+  outline: none;
+}
+
+video {
+  height: auto;
+}
+
+/* 联系页样式 - 满足Alignment原则 */
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.contact-details {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-map {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-map img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.contact-link {
+  color: #667eea;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* 页脚 - 统一样式 */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+/* 响应式设计 - 适配不同设备 */
+@media (max-width: 768px) {
+  .nav-list {
+    gap: 1rem;
+  }
+  
+  .header-banner h1 {
+    font-size: 2rem;
+  }
+}
